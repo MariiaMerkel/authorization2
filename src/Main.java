@@ -1,5 +1,5 @@
-import excaptions.services.Authorization;
-import excaptions.services.AuthorizationRecord;
+import services.Authorization;
+import services.AuthorizationRecord;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +25,6 @@ public class Main {
         authorizationList.add(new AuthorizationRecord("hfhf_54FF", "hfhfFF77777777777777777", "hfhfFF77777777777777777"));
         authorizationList.add(new AuthorizationRecord("hfhfFF77777777777777777", "hfhfFF77777777777777777", "hfhfFF77777777777777777"));
 
-        authorizationList.forEach(a -> Authorization.checkLoginAndPasswords(a));
+        authorizationList.forEach(Authorization::checkLoginAndPasswords);
     }
 }

@@ -1,4 +1,4 @@
-package excaptions.services;
+package services;
 
 import excaptions.WrongLoginException;
 import excaptions.WrongPasswordException;
