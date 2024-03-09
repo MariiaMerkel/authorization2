@@ -1,11 +1,10 @@
-package excaptions.services;
+package services;
 
 import excaptions.WrongLoginException;
 import excaptions.WrongPasswordException;
 
-public record Authorization(String login, String password, String confirmPassword) {
-
-    public static void checkLoginAndPasswords(Authorization a) {
+public class Authorization {
+    public static void checkLoginAndPasswords(AuthorizationRecord a) {
         try {
             Authorization.checkLogin(a.login());
             System.out.printf("Логин %s корректен. ", a.login());
